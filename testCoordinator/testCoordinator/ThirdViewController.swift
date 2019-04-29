@@ -11,6 +11,7 @@ import UIKit
 class ThirdViewController: UIViewController {
 
     weak var delegate:SecondViewControllerDelegate?
+    let btnBack:UIButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,15 @@ class ThirdViewController: UIViewController {
         // Do any additional setup after loading the view.
         title = "ThirdViewController"
         
+        btnBack.frame = CGRect(x: 100, y: 100, width: 150, height: 50)
+        btnBack.setTitle("Back To Root", for: .normal)
+        btnBack.addTarget(self, action: #selector(navigateToRootPageAction), for: .touchUpInside)
+        btnBack.setTitleColor(UIColor.blue, for: .normal)
+        view.addSubview(btnBack)
+    }
+    
+    @objc func navigateToRootPageAction() {
+        delegate?.navigateToRootPage()
     }
     
     @objc func navigateToFirstPageAction() {
@@ -25,6 +35,6 @@ class ThirdViewController: UIViewController {
     }
     
     deinit {
-        print("ThirdViewController deinit")
+        print("== ThirdViewController deinit")
     }
 }

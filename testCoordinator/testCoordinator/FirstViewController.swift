@@ -11,6 +11,7 @@ import UIKit
 protocol FirstViewControllerDelegate : AnyObject {
     func navigateToNextPage()
     func navigateToSecondLevelNextPage()
+    func navigateToSecondSettingPage()
 }
 
 class FirstViewController: UIViewController {
@@ -18,6 +19,7 @@ class FirstViewController: UIViewController {
     weak var delegate : FirstViewControllerDelegate?
     var button:UIButton = UIButton(type: .custom)
     var button2:UIButton = UIButton(type: .custom)
+    let button3:UIButton = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,11 @@ class FirstViewController: UIViewController {
         button2.addTarget(self, action: #selector(tapAction2), for: .touchUpInside)
         view.addSubview(button2)
         
+        button3.frame = CGRect(x: 50, y: 300, width: 150, height: 50)
+        button3.setTitle("Second Setting - 1", for: .normal)
+        button3.addTarget(self, action: #selector(tapAction3), for: .touchUpInside)
+        view.addSubview(button3)
+        
         self.navigationController?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
@@ -44,6 +51,10 @@ class FirstViewController: UIViewController {
     
     @objc func tapAction2() {
         delegate?.navigateToSecondLevelNextPage()
+    }
+    
+    @objc func tapAction3() {
+        delegate?.navigateToSecondSettingPage()
     }
     
     deinit {
@@ -65,6 +76,10 @@ extension FirstViewController:UINavigationControllerDelegate {
             sec.navigateBackToFirstpage()
         } else if let secLevel = fromViewController as? SecondLevel2ViewController {
             secLevel.btnBackTap()
+        } else if let secSetting = fromViewController as? SecondSettingViewController {
+            secSetting.tapBackAction()
+        } else if let secSetting2to1 = fromViewController as? SecondSetting2to1ViewController {
+            secSetting2to1.navigateBackAction()
         }
     }
         

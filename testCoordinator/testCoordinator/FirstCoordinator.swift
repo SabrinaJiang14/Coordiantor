@@ -30,6 +30,13 @@ class FirstCoordinator: Coordinator {
 }
 
 extension FirstCoordinator:FirstViewControllerDelegate {
+    func navigateToSecondSettingPage() {
+        let secondSetting = SecondSettingCoordinator(navigationController: navigationController)
+        secondSetting.delegate = self
+        childCoordinators.append(secondSetting)
+        secondSetting.start()
+    }
+    
     func navigateToNextPage() {
         let second = SecondCoordinator(navigationController: navigationController)
         second.delegate = self
@@ -46,6 +53,11 @@ extension FirstCoordinator:FirstViewControllerDelegate {
 }
 
 extension FirstCoordinator:BackToFirstViewControllerDelegate {
+    func navigateBackRootPage() {
+        navigationController.popToRootViewController(animated: true)
+        childCoordinators.removeAll()
+    }
+    
     func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator) {
         navigationController.popViewController(animated: true)
         childCoordinators.removeLast()
@@ -57,6 +69,11 @@ extension FirstCoordinator:backToRootViewControllerDelegate {
         navigationController.popViewController(animated: true)
         childCoordinators.removeLast()
     }
-    
-    
+}
+
+extension FirstCoordinator:SecondSettingCoordinatorDelegate {
+    func navigateToFirstViewController(coordinator: SecondSettingCoordinator) {
+        navigationController.popViewController(animated: true)
+        childCoordinators.removeLast()
+    }
 }

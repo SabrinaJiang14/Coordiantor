@@ -11,6 +11,7 @@ import UIKit
 protocol SecondViewControllerDelegate: AnyObject {
     func navigateToFirstPage()
     func navigateToThirdPage()
+    func navigateToRootPage()
 }
 
 class SecondViewController: UIViewController {
@@ -23,8 +24,8 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         title = "SecondViewController"
-        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(navigateBackToFirstpage))
-        self.navigationItem.leftBarButtonItem = backButton
+//        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(navigateBackToFirstpage))
+//        self.navigationItem.leftBarButtonItem = backButton
         
         button.frame = CGRect(x: 50, y: 100, width: 150, height: 50)
         button.setTitle("First Level - 2", for: .normal)
@@ -41,6 +42,6 @@ class SecondViewController: UIViewController {
     }
     
     deinit {
-        print("SecondViewController deinit")
+        print("= SecondViewController deinit")
     }
 }

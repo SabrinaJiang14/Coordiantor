@@ -11,6 +11,7 @@ import UIKit
 protocol SecondLevel2ViewControllerDelegate : AnyObject {
     func gotoNextPage()
     func backForwardPage()
+    func backToSecondLevel2VC()
     func presentView()
 }
 
@@ -50,6 +51,6 @@ class SecondLevel2ViewController: UIViewController {
     }
     
     deinit {
-        print("SecondLevel2ViewController deinit")
+        print("= SecondLevel2ViewController deinit")
     }
 }

@@ -29,7 +29,7 @@ class SecondLevel2Coordinator: Coordinator {
     }
     
     deinit {
-        print("SecondLevel2Coordinator deinit")
+        print("= SecondLevel2Coordinator deinit")
     }
 }
 
@@ -50,6 +50,10 @@ extension SecondLevel2Coordinator:SecondLevel2ViewControllerDelegate {
     
     func backForwardPage() {
         delegate?.navigateBackRoot(newCoordinator: self)
+    }
+    
+    func backToSecondLevel2VC() {
+        navigationController.popViewController(animated: true)
     }
 }
 

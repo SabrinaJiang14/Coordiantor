@@ -11,6 +11,7 @@ import UIKit
 
 protocol BackToFirstViewControllerDelegate: AnyObject {
     func navigateBackToFirstPage(newOrderCoordinator: SecondCoordinator)
+    func navigateBackRootPage()
 }
 
 class SecondCoordinator: Coordinator {
@@ -31,7 +32,7 @@ class SecondCoordinator: Coordinator {
     }
     
     deinit {
-        print("SecondCoordinator deinit")
+        print("= SecondCoordinator deinit")
     }
 }
 
@@ -47,5 +48,7 @@ extension SecondCoordinator:SecondViewControllerDelegate {
         self.navigationController.show(third, sender: nil)
     }
     
-    
+    func navigateToRootPage() {
+        delegate?.navigateBackRootPage()
+    }
 }

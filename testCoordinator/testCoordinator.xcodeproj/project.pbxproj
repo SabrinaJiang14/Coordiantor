@@ -11,6 +11,11 @@
 		FD05E21122714E6F00A17B56 /* SecondLevel3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21022714E6F00A17B56 /* SecondLevel3ViewController.swift */; };
 		FD05E21322714EF200A17B56 /* SecondLevel2Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21222714EF200A17B56 /* SecondLevel2Coordinator.swift */; };
 		FD05E21522715BC700A17B56 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21422715BC700A17B56 /* PresentViewController.swift */; };
+		FD05E21722769EC500A17B56 /* SecondSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21622769EC500A17B56 /* SecondSettingCoordinator.swift */; };
+		FD05E21922769F9800A17B56 /* SecondSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21822769F9800A17B56 /* SecondSettingViewController.swift */; };
+		FD05E21B2276A97700A17B56 /* SecondSetting2to1Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21A2276A97700A17B56 /* SecondSetting2to1Coordinator.swift */; };
+		FD05E21D2276AA0500A17B56 /* SecondSetting2to1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21C2276AA0500A17B56 /* SecondSetting2to1ViewController.swift */; };
+		FD05E21F2276ACC700A17B56 /* SecondSetting3to1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD05E21E2276ACC700A17B56 /* SecondSetting3to1ViewController.swift */; };
 		FDBBEDFD2251C45400FFF166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBEDFC2251C45400FFF166 /* AppDelegate.swift */; };
 		FDBBEDFF2251C45400FFF166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBBEDFE2251C45400FFF166 /* ViewController.swift */; };
 		FDBBEE022251C45400FFF166 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBBEE002251C45400FFF166 /* Main.storyboard */; };
@@ -29,6 +34,11 @@
 		FD05E21022714E6F00A17B56 /* SecondLevel3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevel3ViewController.swift; sourceTree = "<group>"; };
 		FD05E21222714EF200A17B56 /* SecondLevel2Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevel2Coordinator.swift; sourceTree = "<group>"; };
 		FD05E21422715BC700A17B56 /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		FD05E21622769EC500A17B56 /* SecondSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingCoordinator.swift; sourceTree = "<group>"; };
+		FD05E21822769F9800A17B56 /* SecondSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSettingViewController.swift; sourceTree = "<group>"; };
+		FD05E21A2276A97700A17B56 /* SecondSetting2to1Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetting2to1Coordinator.swift; sourceTree = "<group>"; };
+		FD05E21C2276AA0500A17B56 /* SecondSetting2to1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetting2to1ViewController.swift; sourceTree = "<group>"; };
+		FD05E21E2276ACC700A17B56 /* SecondSetting3to1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSetting3to1ViewController.swift; sourceTree = "<group>"; };
 		FDBBEDF92251C45400FFF166 /* testCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDBBEDFC2251C45400FFF166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDBBEDFE2251C45400FFF166 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +100,11 @@
 				FD05E21022714E6F00A17B56 /* SecondLevel3ViewController.swift */,
 				FD05E21222714EF200A17B56 /* SecondLevel2Coordinator.swift */,
 				FD05E21422715BC700A17B56 /* PresentViewController.swift */,
+				FD05E21622769EC500A17B56 /* SecondSettingCoordinator.swift */,
+				FD05E21822769F9800A17B56 /* SecondSettingViewController.swift */,
+				FD05E21A2276A97700A17B56 /* SecondSetting2to1Coordinator.swift */,
+				FD05E21C2276AA0500A17B56 /* SecondSetting2to1ViewController.swift */,
+				FD05E21E2276ACC700A17B56 /* SecondSetting3to1ViewController.swift */,
 			);
 			path = testCoordinator;
 			sourceTree = "<group>";
@@ -172,11 +187,16 @@
 				FD05E21322714EF200A17B56 /* SecondLevel2Coordinator.swift in Sources */,
 				FDBBEE1D2251E5C900FFF166 /* FirstCoordinator.swift in Sources */,
 				FDBBEE232252015400FFF166 /* SecondViewController.swift in Sources */,
+				FD05E21B2276A97700A17B56 /* SecondSetting2to1Coordinator.swift in Sources */,
 				FDBBEDFD2251C45400FFF166 /* AppDelegate.swift in Sources */,
 				FDBBEE25225202BF00FFF166 /* ThirdViewController.swift in Sources */,
+				FD05E21722769EC500A17B56 /* SecondSettingCoordinator.swift in Sources */,
 				FDBBEE1B2251E5A800FFF166 /* Coordinator.swift in Sources */,
 				FD05E21122714E6F00A17B56 /* SecondLevel3ViewController.swift in Sources */,
+				FD05E21F2276ACC700A17B56 /* SecondSetting3to1ViewController.swift in Sources */,
 				FD05E20F22714E5E00A17B56 /* SecondLevel2ViewController.swift in Sources */,
+				FD05E21922769F9800A17B56 /* SecondSettingViewController.swift in Sources */,
+				FD05E21D2276AA0500A17B56 /* SecondSetting2to1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
